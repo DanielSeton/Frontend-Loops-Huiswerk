@@ -15,6 +15,7 @@
 // 	'Beste Otis, je salaris van €2800,- is zojuist overgemaakt. Val me nu alsjeblieft niet meer lastig.',
 // ==========================================
 
+console.log("Opdracht 1")
 const salaryDetails = [
 	{name: 'Max', salary: 3200},
 	{name: 'Sophia', salary: 2350},
@@ -22,6 +23,12 @@ const salaryDetails = [
 	{name: 'Nina', salary: 3500},
 	{name: 'Otis', salary: 2800}
 ];
+
+for (let i = 0; i < salaryDetails.length; i++) {
+	console.log("Beste "+ salaryDetails[i].name + ", je salaris van " + salaryDetails[i].salary + ",- is zojuist overgemaakt. Val me nu alsjeblieft niet meer lastig.");
+}
+
+console.log(" ")
 
 // ==========================================
 // Opdracht 2. Wanneer iemand een verlof-aanvraag doet, moet Bob eerst uit zijn hoofd uitrekenen of deze medewerker nog
@@ -36,6 +43,7 @@ const salaryDetails = [
 // 	'Otis heeft nog 18 vakantiedagen over.',
 // ==========================================
 
+console.log("Opdracht 2")
 const vacationDays = [
 	{name: 'Max', totalVacationDays: 25, usedVacationDays: 10},
 	{name: 'Sophia', totalVacationDays: 30, usedVacationDays: 15},
@@ -44,6 +52,12 @@ const vacationDays = [
 	{name: 'Otis', totalVacationDays: 25, usedVacationDays: 7},
 ];
 
+for (let i = 0; i < vacationDays.length; i++) {
+	restVacDay = vacationDays[i].totalVacationDays - vacationDays[i].usedVacationDays;
+	console.log(vacationDays[i].name + " heeft nog " + restVacDay + " vakantiedagen over.");
+}
+
+console.log(" ")
 
 // ==========================================
 // Opdracht 3. Bob heeft een lijst van medewerkers en de opleidingen die ze volgen. Hij wil weten wie er een opleiding volgen
@@ -55,6 +69,7 @@ const vacationDays = [
 // Ali: Communicatietraining
 // ==========================================
 
+console.log("Opdracht 3")
 const employeesInTraining = [
 	{name: 'Max', training: 'Leiderschapstraining', month: 'Januari'},
 	{name: 'Sophia', training: 'Projectmanagement', month: 'Februari'},
@@ -62,6 +77,14 @@ const employeesInTraining = [
 	{name: 'Nina', training: 'Teamworktraining', month: 'Maart'},
 	{name: 'Otis', training: 'Teamworktraining', month: 'Februari'},
 ];
+
+for (let i = 0; i < employeesInTraining.length; i++) {
+	if (employeesInTraining[i].month === "Januari"){
+		console.log(employeesInTraining[i].name + ": " + employeesInTraining[i].training);
+	}
+}
+
+console.log(" ")
 
 // ==========================================
 // Opdracht 4a. Medewerkers worden ieder jaar beoordeelt op hun functioneren. Het is aan Bob om de scores om te zetten
@@ -81,6 +104,7 @@ const employeesInTraining = [
 // 6%
 // ==========================================
 
+console.log("Opdracht 4a")
 const scores = [
 	{name: 'Max', score: 83, salaryIncrease: null},
 	{name: 'Sophia', score: 77, salaryIncrease: null},
@@ -88,6 +112,26 @@ const scores = [
 	{name: 'Nina', score: 66, salaryIncrease: null},
 	{name: 'Otis', score: 100, salaryIncrease: null},
 ];
+
+for (let i = 0; i < scores.length; i++) {
+	if (scores[i].score < 60) {
+		console.log("0%");
+	}
+	else if (scores[i].score <= 69) {
+		console.log("2%");
+	}
+	else if (scores[i].score <= 89) {
+		console.log("3%");
+	}
+	else if (scores[i].score <= 99) {
+		console.log("4%");
+	}
+	else if (scores[i].score === 100) {
+		console.log("6%");
+	}
+}
+
+console.log(" ")
 
 // ==========================================
 // Opdracht 4b. Breid je script uit door het percentage op te slaan in de 'salaryIncrease'-property van ieder object in de array.
@@ -104,7 +148,28 @@ const scores = [
 // ];
 // ==========================================
 
+console.log("Opdracht 4b")
+for (let i = 0; i < scores.length; i++) {
+	if (scores[i].score < 60) {
+		scores[i].salaryIncrease = "0%";
+	}
+	else if (scores[i].score <= 69) {
+		scores[i].salaryIncrease = "2%";
+	}
+	else if (scores[i].score <= 89) {
+		scores[i].salaryIncrease = "3%";
+	}
+	else if (scores[i].score <= 99) {
+		scores[i].salaryIncrease = "4%";
+	}
+	else if (scores[i].score === 100) {
+		scores[i].salaryIncrease = "6%"
+	}
+}
 
+console.log(scores)
+
+console.log(" ")
 
 // ==========================================
 // Opdracht 5. Bob wil ervoor zorgen dat al zijn medewerkers een correct bedrijfs-e-mailadres hebben. Deze e-mailadressen moeten
@@ -123,6 +188,8 @@ const scores = [
 // ]
 // ==========================================
 
+
+console.log("Opdracht 5")
 const employees = [
 	{firstName: 'Max', lastName: 'Janssen'},
 	{firstName: 'Sophia', lastName: 'Vries'},
@@ -130,6 +197,12 @@ const employees = [
 	{firstName: 'Nina', lastName: 'Berg'},
 	{firstName: 'Otis', lastName: 'Kuiper'},
 ];
+
+for (let i = 0; i < employees.length; i++) {
+	var email = employees[i].firstName + "." + employees[i].lastName + "@loop-it-solutions.nl";
+}
+employees.push(email);
+console.log(employees)
 
 // ==========================================
 // Opdracht 6 (BONUS). Bob wil dat alle e-mailadressen in kleine letters worden opgeslagen, zodat ze consistent zijn.
