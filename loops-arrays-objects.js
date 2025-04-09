@@ -199,9 +199,10 @@ const employees = [
 ];
 
 for (let i = 0; i < employees.length; i++) {
-	var email = employees[i].firstName + "." + employees[i].lastName + "@loop-it-solutions.nl";
+	const employEmail = employees[i].firstName + "." + employees[i].lastName + "@loop-it-solutions.nl";
+	employees[i].email = employEmail;
 }
-employees.push(email);
+
 console.log(employees)
 
 // ==========================================
