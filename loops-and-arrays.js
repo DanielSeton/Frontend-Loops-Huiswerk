@@ -11,7 +11,15 @@
 // Vergadering om 17:00
 // ==========================================
 
+console.log("Opdracht 1")
+
 const meetingTimes = ['09:00', '10:30', '14:00', '15:30', '17:00'];
+
+for (let i = 0; i < meetingTimes.length; i++) {
+    console.log("Vergadering om " + meetingTimes[i]);
+}
+
+console.log(" ")
 
 
 // ==========================================
@@ -25,8 +33,16 @@ const meetingTimes = ['09:00', '10:30', '14:00', '15:30', '17:00'];
 // console.log(salaries) geeft [3360, 2467.5, 2940, 3675, 2940]
 // ==========================================
 
+console.log("Opdracht 2")
+
 const salaries = [3200, 2350, 2800, 3500, 2800];
 
+for (let i = 0; i < salaries.length; i++) {
+    salaries[i] = salaries[i] * 0.05 + salaries[i];
+    console.log(salaries[i]);
+}
+
+console.log(" ")
 
 // ==========================================
 // Opdracht 3. Eén van Bob's taken is medewerkers feliciteren met hun "zoveelste" verjaardag.
@@ -37,8 +53,16 @@ const salaries = [3200, 2350, 2800, 3500, 2800];
 // console.log(birthYears) geeft [30, 28, 35, 22, 43]
 // ==========================================
 
+
+console.log("Opdracht 3")
 const birthYears = [1995, 1997, 1990, 2003, 1982];
 
+for (let i = 0; i < birthYears.length; i++) {
+    birthYears[i] = 2025 - birthYears[i];
+    console.log(birthYears[i]);
+}
+
+console.log(" ")
 
 // ==========================================
 // Opdracht 4. Bob houdt bij hoeveel verlofuren medewerkers per maand opnemen. Nu wil hij voor het nieuwe jaar een bonusstructuur toepassen:
@@ -50,7 +74,17 @@ const birthYears = [1995, 1997, 1990, 2003, 1982];
 // console.log(leaveHours) geeft [12, 4.5, 4, 3.5, 1.5]
 // ==========================================
 
+console.log("Opdracht 4")
 const leaveHours = [6, 9, 2, 7, 3];
+
+for (let i = 0; i < leaveHours.length; i++) {
+    if (leaveHours[i] % 2 === 0) {
+        console.log(leaveHours[i] * 2);
+    }
+    else{
+        console.log(leaveHours[i] * 0.5);
+    }
+}
 
 
 // ==========================================
